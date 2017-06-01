@@ -1,0 +1,238 @@
+//
+// Scaffolding
+// --------------------------------------------------
+
+
+// Reset the box-sizing
+//
+// Heads up! This reset may cause conflicts with some third-party widgets.
+// For recommendations on resolving such conflicts, see
+// http://getbootstrap.com/getting-started/#third-box-sizing
+* {
+  .box-sizing(border-box);
+}
+*:before,
+*:after {
+  .box-sizing(border-box);
+}
+
+
+// Body reset
+
+html {
+  font-size: 10px;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  font-family: @font-family-base;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @text-color;
+  background-color: @body-bg;
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+
+// Links
+
+a {
+  color: @link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: @link-hover-color;
+    text-decoration: @link-hover-decoration;
+  }
+
+  &:focus {
+    .tab-focus();
+  }
+}
+
+
+// Figures
+//
+// We reset this here because previously Normalize had no `figure` margins. This
+// ensures we don't break anyone's use of the element.
+
+figure {
+  margin: 0;
+}
+
+
+// Images
+
+img {
+  vertical-align: middle;
+}
+
+// Responsive images (ensure images don't scale beyond their parents)
+.img-responsive {
+  .img-responsive();
+}
+
+// Rounded corners
+.img-rounded {
+  border-radius: @border-radius-large;
+}
+
+// Image thumbnails
+//
+// Heads up! This is mixin-ed into thumbnails.less for `.thumbnail`.
+.img-thumbnail {
+  padding: @thumbnail-padding;
+  line-height: @line-height-base;
+  background-color: @thumbnail-bg;
+  border: 1px solid @thumbnail-border;
+  border-radius: @thumbnail-border-radius;
+  .transition(all .2s ease-in-out);
+
+  // Keep them at most 100% wide
+  .img-responsive(inline-block);
+}
+
+// Perfect circle
+.img-circle {
+  border-radius: 50%; // set radius in percents
+}
+
+
+// Horizontal rules
+
+hr {
+  margin-top:    @line-height-computed;
+  margin-bottom: @line-height-computed;
+  border: 0;
+  border-top: 1px solid @hr-border;
+}
+
+
+// Only display content to screen readers
+//
+// See: http://a11yproject.com/posts/how-to-hide-content
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
+// Use in conjunction with .sr-only to only display content when it's focused.
+// Useful for "Skip to main content" links; see http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+// Credit: HTML5 Boilerplate
+
+.sr-only-focusable {
+  &:active,
+  &:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+  }
+}
+
+
+// iOS "clickable elements" fix for role="button"
+//
+// Fixes "clickability" issue (and more generally, the firing of events such as focus as well)
+// for traditionally non-focusable elements with role="button"
+// see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+
+[role="button"] {
+  cursor: pointer;
+}
+
+.line{
+  border-top: @border-color solid 1px;
+  height: 0;
+  display: block;
+}
+
+/* 常用字号大小 */
+.font-12 {font-size: 12px !important;}
+.font-14 {font-size: 14px !important;}
+.font-16 {font-size: 16px !important;}
+.font-18 {font-size: 18px !important;}
+.font-20 {font-size: 20px !important;}
+.font-22 {font-size: 22px !important;}
+.font-24 {font-size: 24px !important;}
+.font-26 {font-size: 26px !important;}
+.font-28 {font-size: 28px !important;}
+.font-32 {font-size: 32px !important;}
+.font-48 {font-size: 48px !important;}
+.font-64 {font-size: 64px !important;}
+.font-72 {font-size: 72px !important;}
+
+
+/* 常用间距 */
+.padding-5{ padding: 5px; }
+.padding-l-5{padding-left: 5px;}
+.padding-r-5{padding-right: 5px;}
+.padding-t-5{padding-top: 5px;}
+.padding-b-5{padding-bottom: 5px;}
+
+.padding-10{ padding: 10px; }
+.padding-l-10{padding-left: 10px;}
+.padding-r-10{padding-right: 10px;}
+.padding-t-10{padding-top: 10px;}
+.padding-b-10{padding-bottom: 10px;}
+
+.padding-15{ padding: 15px; }
+.padding-l-15{padding-left: 15px;}
+.padding-r-15{padding-right: 15px;}
+.padding-t-15{padding-top: 15px;}
+.padding-b-15{padding-bottom: 15px;}
+
+.padding-20{ padding: 20px; }
+.padding-l-20{padding-left: 20px;}
+.padding-r-20{padding-right: 20px;}
+.padding-t-20{padding-top: 20px;}
+.padding-b-20{padding-bottom: 20px;}
+
+.margin-5{ margin: 5px; }
+.margin-l-5{margin-left: 5px;}
+.margin-r-5{margin-right: 5px;}
+.margin-t-5{margin-top: 5px;}
+.margin-b-5{margin-bottom: 5px;}
+
+.margin-10{ margin: 10px; }
+.margin-l-10{margin-left: 10px;}
+.margin-r-10{margin-right: 10px;}
+.margin-t-10{margin-top: 10px;}
+.margin-b-10{margin-bottom: 10px;}
+
+.margin-15{ margin: 15px; }
+.margin-l-15{margin-left: 15px;}
+.margin-r-15{margin-right: 15px;}
+.margin-t-15{margin-top: 15px;}
+.margin-b-15{margin-bottom: 15px;}
+
+.margin-20{ margin: 20px; }
+.margin-l-20{margin-left: 20px;}
+.margin-r-20{margin-right: 20px;}
+.margin-t-20{margin-top: 20px;}
+.margin-b-20{margin-bottom: 20px;}
+
+.split{
+  display: block;
+  height: 10px;
+}
+

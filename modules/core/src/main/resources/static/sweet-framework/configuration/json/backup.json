@@ -1,0 +1,759 @@
+{
+    "code": "success",
+    "data": {
+        "日志配置": {
+            "group": "日志配置",
+            "items": [
+                {
+                    "key": "spring.output.ansi.enabled",
+                    "name": "控制台颜色",
+                    "type": "string",
+                    "candidateValues": "value1,value12,value13",
+                    "defaultValue": "detect",
+                    "description": ""
+                },
+                {
+                    "key": "logging.level.root",
+                    "name": "日志级别",
+                    "type": "string",
+                    "candidateValues": "value11,value2212,value33313",
+                    "defaultValue": "INFO",
+                    "description": "日志级别(TRACE, DEBUG, INFO, WARN, ERROR, FATAL, OFF)"
+                },
+                {
+                    "key": "logging.level.cn.evun.sweet.common.tracer.ThreadLocalProcessTracer",
+                    "name": "日志级别",
+                    "type": "string",
+                    "candidateValues": "value1,value12,value13",
+                    "defaultValue": "INFO",
+                    "description": "ThreadLocalProcessTracer日志级别"
+                },
+                {
+                    "key": "logging.file",
+                    "name": "日志文件路径",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "${user.home:./}/sweet-logs/${spring.application.name:sweet-application}-${spring.application.index:${server.port:8080}}.log",
+                    "description": ""
+                }
+            ]
+        },
+        "Tomcat配置": {
+            "group": "Tomcat配置",
+            "items": [
+                {
+                    "key": "server.port",
+                    "name": "Tomcat监听端口",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "${spring.application.index}",
+                    "description": ""
+                },
+                {
+                    "key": "server.context-path",
+                    "name": "Servlet Context Path",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "/",
+                    "description": ""
+                },
+                {
+                    "key": "server.session.timeout",
+                    "name": "会话过期时间(单位: 秒)",
+                    "type": "number",
+                    "candidateValues": null,
+                    "defaultValue": "1800",
+                    "description": ""
+                },
+                {
+                    "key": "server.address",
+                    "name": "监听IP地址",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "0.0.0.0",
+                    "description": "默认在所有网卡上服务"
+                },
+                {
+                    "key": "server.tomcat.max-threads",
+                    "name": "服务线程数",
+                    "type": "number",
+                    "candidateValues": null,
+                    "defaultValue": "300",
+                    "description": "最大请求处理线程数"
+                }
+            ]
+        },
+        "数据库配置": {
+            "group": "数据库配置",
+            "items": [
+                {
+                    "key": "spring.datasource.name",
+                    "name": "数据源名称",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "${spring.application.name:sweet-framework}.DataSource.${spring.application.index:${server.port:8080}}",
+                    "description": "数据源名称"
+                },
+                {
+                    "key": "spring.datasource.type",
+                    "name": "JDBC数据源",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "com.alibaba.druid.pool.DruidDataSource",
+                    "description": "JDBC数据源, 默认使用阿里Druid数据源"
+                },
+                {
+                    "key": "spring.datasource.db-type",
+                    "name": "数据库类型",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "mysql",
+                    "description": "数据库类型"
+                },
+                {
+                    "key": "spring.datasource.driver-class-name",
+                    "name": "JDBC驱动程序",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "com.mysql.jdbc.Driver",
+                    "description": "JDBC驱动程序"
+                },
+                {
+                    "key": "spring.datasource.url",
+                    "name": "JDBC Connection URL",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8",
+                    "description": "JDBC Connection URL"
+                },
+                {
+                    "key": "spring.datasource.username",
+                    "name": "JDBC 用户名",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "root",
+                    "description": "JDBC用户名"
+                },
+                {
+                    "key": "spring.datasource.password",
+                    "name": "JDBC 密码",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "",
+                    "description": "JDBC密码"
+                },
+                {
+                    "key": "spring.datasource.initialSize",
+                    "name": "初始化连接数",
+                    "type": "number",
+                    "candidateValues": null,
+                    "defaultValue": "5",
+                    "description": "初始化连接数"
+                },
+                {
+                    "key": "spring.datasource.maxActive",
+                    "name": "最大连接数",
+                    "type": "number",
+                    "candidateValues": null,
+                    "defaultValue": "5",
+                    "description": "最大连接数"
+                },
+                {
+                    "key": "spring.datasource.minIdle",
+                    "name": "最小不活动连接数",
+                    "type": "number",
+                    "candidateValues": null,
+                    "defaultValue": "1",
+                    "description": "最小不活动连接数"
+                },
+                {
+                    "key": "spring.datasource.maxWait",
+                    "name": "最大等待时间",
+                    "type": "number",
+                    "candidateValues": null,
+                    "defaultValue": "-1",
+                    "description": "连接池占满时,最大等待时间(毫秒), \"-1\"表示一直等待直到有可用连接"
+                },
+                {
+                    "key": "spring.datasource.timeBetweenEvictionRunsMillis",
+                    "name": "Idle检测",
+                    "type": "number",
+                    "candidateValues": null,
+                    "defaultValue": "60000",
+                    "description": ""
+                },
+                {
+                    "key": "spring.datasource.minEvictableIdleTimeMillis",
+                    "name": "minEvictableIdleTime",
+                    "type": "number",
+                    "candidateValues": null,
+                    "defaultValue": "30000",
+                    "description": "minEvictableIdleTime"
+                },
+                {
+                    "key": "spring.datasource.validationQuery",
+                    "name": "有效连接验证SQL",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "select '1'",
+                    "description": ""
+                },
+                {
+                    "key": "spring.datasource.testOnBorrow",
+                    "name": "连接有效性验证",
+                    "type": "boolean",
+                    "candidateValues": null,
+                    "defaultValue": "false",
+                    "description": "Borrow阶段"
+                },
+                {
+                    "key": "spring.datasource.testOnReturn",
+                    "name": "连接有效性验证",
+                    "type": "boolean",
+                    "candidateValues": null,
+                    "defaultValue": "false",
+                    "description": "Return阶段"
+                },
+                {
+                    "key": "spring.datasource.testWhileIdle",
+                    "name": "连接有效性验证",
+                    "type": "boolean",
+                    "candidateValues": null,
+                    "defaultValue": "true",
+                    "description": "Idle阶段"
+                },
+                {
+                    "key": "spring.datasource.poolPreparedStatements",
+                    "name": "池化PreparedStatement",
+                    "type": "boolean",
+                    "candidateValues": null,
+                    "defaultValue": "true",
+                    "description": ""
+                },
+                {
+                    "key": "spring.datasource.maxOpenPreparedStatements",
+                    "name": "最大PreparedStatement数",
+                    "type": "number",
+                    "candidateValues": null,
+                    "defaultValue": "50",
+                    "description": ""
+                },
+                {
+                    "key": "mybatis.mapperLocations",
+                    "name": "Mybatis sql-map文件路径",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "classpath*:sql-mappers/**/*.xml",
+                    "description": "Mybatis sql mapper文件路径, 多个路径请使用\",\"分隔"
+                },
+                {
+                    "key": "mybatis.typeAliasesPackage",
+                    "name": "Mybatis类型映射别名包",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "",
+                    "description": "Mybatis 类型映射别名包，多个包请使用\",\"分隔"
+                },
+                {
+                    "key": "sweet.framework.core.mybatis.mapper.scan.basePackages",
+                    "name": "Mapper扫描基准包路径",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "",
+                    "description": "请设置到DAO接口目录, 支持通配符及以\",\"或\";\"分隔的多个包"
+                },
+                {
+                    "key": "mybatis.typeHandlersPackage",
+                    "name": "Mybatis类型转换包",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "",
+                    "description": "Mybatis 类型转换包"
+                }
+            ]
+        },
+        "FreeMarker配置": {
+            "group": "FreeMarker配置",
+            "items": [
+                {
+                    "key": "spring.freemarker.enabled",
+                    "name": "是否启用Freemarker",
+                    "type": "boolean",
+                    "candidateValues": null,
+                    "defaultValue": "true",
+                    "description": ""
+                },
+                {
+                    "key": "spring.freemarker.allow-request-override",
+                    "name": "允许request属性覆盖",
+                    "type": "boolean",
+                    "candidateValues": null,
+                    "defaultValue": "false",
+                    "description": "指定HttpServletRequest的属性是否可以覆盖controller的model的同名项"
+                },
+                {
+                    "key": "spring.freemarker.allow-session-override",
+                    "name": "允许session属性覆盖",
+                    "type": "boolean",
+                    "candidateValues": null,
+                    "defaultValue": "false",
+                    "description": "指定HttpSession的属性是否可以覆盖controller的model的同名项"
+                },
+                {
+                    "key": "spring.freemarker.cache",
+                    "name": "启用Freemarker缓存",
+                    "type": "boolean",
+                    "candidateValues": null,
+                    "defaultValue": "false",
+                    "description": "建议生产环境设置成true"
+                },
+                {
+                    "key": "spring.freemarker.charset",
+                    "name": "模板文件字符集",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "UTF-8",
+                    "description": ""
+                },
+                {
+                    "key": "spring.freemarker.check-template-location",
+                    "name": "检查模板位置",
+                    "type": "boolean",
+                    "candidateValues": null,
+                    "defaultValue": "true",
+                    "description": ""
+                },
+                {
+                    "key": "spring.freemarker.content-type",
+                    "name": "输出的默认Content-Type",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "text/html",
+                    "description": ""
+                },
+                {
+                    "key": "spring.freemarker.expose-request-attributes",
+                    "name": "导出请求Attributes",
+                    "type": "boolean",
+                    "candidateValues": null,
+                    "defaultValue": "false",
+                    "description": ""
+                },
+                {
+                    "key": "spring.freemarker.expose-session-attributes",
+                    "name": "导出会话Attributes",
+                    "type": "boolean",
+                    "candidateValues": null,
+                    "defaultValue": "false",
+                    "description": ""
+                },
+                {
+                    "key": "spring.freemarker.expose-spring-macro-helpers",
+                    "name": "导出Spring帮助宏",
+                    "type": "boolean",
+                    "candidateValues": null,
+                    "defaultValue": "true",
+                    "description": ""
+                },
+                {
+                    "key": "spring.freemarker.prefer-file-system-access",
+                    "name": "优化文件系统访问",
+                    "type": "boolean",
+                    "candidateValues": null,
+                    "defaultValue": "true",
+                    "description": ""
+                },
+                {
+                    "key": "spring.freemarker.suffix",
+                    "name": "模板文件后缀",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": ".ftl",
+                    "description": ""
+                },
+                {
+                    "key": "spring.freemarker.template-loader-path",
+                    "name": "模板资源路径",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "classpath:/templates/",
+                    "description": ""
+                },
+                {
+                    "key": "spring.freemarker.settings.template_update_delay",
+                    "name": "模板延迟更新",
+                    "type": "number",
+                    "candidateValues": null,
+                    "defaultValue": "0",
+                    "description": ""
+                },
+                {
+                    "key": "spring.freemarker.settings.default_encoding",
+                    "name": "默认字符集",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "UTF-8",
+                    "description": ""
+                },
+                {
+                    "key": "spring.freemarker.settings.classic_compatible",
+                    "name": "兼容经典版本",
+                    "type": "boolean",
+                    "candidateValues": null,
+                    "defaultValue": "true",
+                    "description": ""
+                },
+                {
+                    "key": "spring.freemarker.order",
+                    "name": "Order",
+                    "type": "number",
+                    "candidateValues": null,
+                    "defaultValue": "1",
+                    "description": ""
+                }
+            ]
+        },
+        "Sweet框架参数设置": {
+            "group": "Sweet框架参数设置",
+            "items": [
+                {
+                    "key": "spring.mvc.throw-exception-if-no-handler-found",
+                    "name": "MVC Handler行为",
+                    "type": "boolean",
+                    "candidateValues": null,
+                    "defaultValue": "true",
+                    "description": "是否在没有对应Handler时抛出异常"
+                },
+                {
+                    "key": "sweet.framework.core.mvc.error.handle",
+                    "name": "启用默认错误控制器",
+                    "type": "boolean",
+                    "candidateValues": null,
+                    "defaultValue": "true",
+                    "description": ""
+                },
+                {
+                    "key": "sweet.framework.core.mvc.error.handler.outputStackTrace",
+                    "name": "输出完整错误栈",
+                    "type": "boolean",
+                    "candidateValues": null,
+                    "defaultValue": "false",
+                    "description": "输出错误栈(建议生产环境下关闭)"
+                },
+                {
+                    "key": "sweet.framework.core.mvc.error.handle.json",
+                    "name": "使用json输出错误",
+                    "type": "boolean",
+                    "candidateValues": null,
+                    "defaultValue": "true",
+                    "description": "设置为\"false\"后将看到\"原始\"的异常输出"
+                },
+                {
+                    "key": "sweet.framework.core.http.request.trace",
+                    "name": "HTTP请求跟踪",
+                    "type": "boolean",
+                    "candidateValues": null,
+                    "defaultValue": "true",
+                    "description": ""
+                },
+                {
+                    "key": "sweet.framework.core.mvc.api.i18n.basename",
+                    "name": "国际化文件路径",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "classpath:i18n/api",
+                    "description": "APIResponse的国际化文件路径, 多个路径以\",\"分隔, 资源文件请使用\"UTF-8\""
+                },
+                {
+                    "key": "sweet.framework.core.mvc.api.i18n.locale",
+                    "name": "国际化名",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "zh_CN",
+                    "description": "APIResponse的国际化名"
+                },
+                {
+                    "key": "sweet.framework.core.i18n.enabled",
+                    "name": "i18n配置",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "true",
+                    "description": ""
+                },
+                {
+                    "key": "sweet.framework.core.i18n.resources.baseName",
+                    "name": "国际化配置文件存放目录",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "i18n/messages",
+                    "description": "国际化Message配置文件存放目录"
+                },
+                {
+                    "key": "sweet.framework.core.i18n.resources.encoding",
+                    "name": "国际化Message配置文件编码",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "utf-8",
+                    "description": ""
+                },
+                {
+                    "key": "sweet.framework.core.i18n.defaultLocale",
+                    "name": "默认Locale",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "zh_CN",
+                    "description": ""
+                },
+                {
+                    "key": "sweet.framework.core.i18n.locale.param",
+                    "name": "转换语言时传参名称",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "lang",
+                    "description": "转换语言时传参名称, http://xxx.xxx.com/page?lang=zh_CN"
+                },
+                {
+                    "key": "sweet.framework.core.http.defence.xss",
+                    "name": "XSS + SQL注入防御",
+                    "type": "boolean",
+                    "candidateValues": null,
+                    "defaultValue": "true",
+                    "description": ""
+                },
+                {
+                    "key": "sweet.framework.core.http.defence.csrf",
+                    "name": "CSRF防御",
+                    "type": "boolean",
+                    "candidateValues": null,
+                    "defaultValue": "true",
+                    "description": ""
+                },
+                {
+                    "key": "sweet.framework.core.http.restful.doc",
+                    "name": "使用Swagger2在线Restful文档",
+                    "type": "boolean",
+                    "candidateValues": null,
+                    "defaultValue": "true",
+                    "description": "使用Swagger2 在线Restful文档, 访问: /swagger-ui.html"
+                },
+                {
+                    "key": "sweet.framework.core.http.restful.doc.modelPackages",
+                    "name": "Model包名",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "",
+                    "description": "Model包名, 多个包使用\",\"分隔"
+                },
+                {
+                    "key": "sweet.framework.core.http.restful.doc.swagger.title",
+                    "name": "swagger文档属性",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "${spring.application.name:sweet-application}Restful API Documentation",
+                    "description": ""
+                },
+                {
+                    "key": "sweet.framework.core.http.restful.doc.swagger.description",
+                    "name": "swagger文档属性",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "",
+                    "description": ""
+                },
+                {
+                    "key": "sweet.framework.core.http.restful.doc.swagger.termsOfServiceUrl",
+                    "name": "swagger文档属性",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "http://swagger.io/terms/",
+                    "description": ""
+                },
+                {
+                    "key": "sweet.framework.core.http.restful.doc.swagger.contract",
+                    "name": "swagger文档属性",
+                    "type": "",
+                    "candidateValues": null,
+                    "defaultValue": "sweet-group@geely.com",
+                    "description": ""
+                },
+                {
+                    "key": "sweet.framework.core.http.restful.doc.swagger.license",
+                    "name": "swagger文档属性",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "Apache 2.0",
+                    "description": ""
+                },
+                {
+                    "key": "sweet.framework.core.http.restful.doc.swagger.licenseUrl",
+                    "name": "swagger文档属性",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "http://www.apache.org/licenses/LICENSE-2.0",
+                    "description": ""
+                },
+                {
+                    "key": "springfox.documentation.swagger.v2.path",
+                    "name": "spring-fox 文档json数据地址",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "/v2/api-docs",
+                    "description": ""
+                },
+                {
+                    "key": "sweet.framework.core.http.restful.doc.api.groups",
+                    "name": "ocket group配置",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "",
+                    "description": "docket group配置, 格式: [接口组名1:]接口URI正则表达式1;[接口组名2:]接口URI正则表达式2; \"[]\"中的表示可选项, 接口组名不可重复"
+                },
+                {
+                    "key": "sweet.framework.core.mvc.api.pattern",
+                    "name": "api uri pattern",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "/*",
+                    "description": ""
+                },
+                {
+                    "key": "sweet.framework.core.mvc.dynamic-resource.pattern",
+                    "name": "dynamic resource pattern",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "/*",
+                    "description": ""
+                },
+                {
+                    "key": "sweet.framework.core.mvc.data-binder.date.useGMTTimeZone",
+                    "name": "SpringMVC日期型参数解析",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "false",
+                    "description": "是否使用GMT时区, 注意: 开启此选项会将传入时间字符串全部当作GMT时间处理, 默认使用当前时区,请注意配置的时间格式需要使用\":\"区分\"时,分,秒,毫秒\"字段"
+                },
+                {
+                    "key": "sweet.framework.core.mvc.data-binder.date.shortDateFormat",
+                    "name": "SpringMVC日期型参数解析",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "yyyy-MM-dd",
+                    "description": "SpringMVC日期型参数解析不含时间"
+                },
+                {
+                    "key": "sweet.framework.core.mvc.data-binder.date.middleDateFormat",
+                    "name": "SpringMVC日期型参数解析",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "yyyy-MM-dd HH:mm",
+                    "description": "SpringMVC日期型参数解析不含秒"
+                },
+                {
+                    "key": "sweet.framework.core.mvc.data-binder.date.longDateFormat",
+                    "name": "SpringMVC日期型参数解析",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "yyyy-MM-dd HH:mm:ss",
+                    "description": "SpringMVC日期型参数解析含时分秒"
+                },
+                {
+                    "key": "sweet.framework.core.mvc.data-binder.date.fullDateFormat",
+                    "name": "SpringMVC日期型参数解析",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "yyyy-MM-dd HH:mm:ss:SSS",
+                    "description": "SpringMVC日期型参数解析含毫秒"
+                },
+                {
+                    "key": "sweet.framework.core.rest.invocation.connectTimeout",
+                    "name": "连接超时时间",
+                    "type": "number",
+                    "candidateValues": null,
+                    "defaultValue": "3000",
+                    "description": "连接超时时间, -1表示不超时"
+                },
+                {
+                    "key": "sweet.framework.core.rest.invocation.readTimeout",
+                    "name": "请求发出后,响应超时时间",
+                    "type": "number",
+                    "candidateValues": null,
+                    "defaultValue": "-1",
+                    "description": "请求发出后,响应超时时间,-1表示不超时"
+                },
+                {
+                    "key": "sweet.framework.core.rest.invocation.warning.limit",
+                    "name": "慢请求",
+                    "type": "number",
+                    "candidateValues": null,
+                    "defaultValue": "2000",
+                    "description": ""
+                },
+                {
+                    "key": "sweet.framework.core.mvc.upload.maxFileSize",
+                    "name": "上传文件的最大字节数, 单位支持K,M",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "10MB",
+                    "description": "上传请求的最大字节数, 单位支持K,M"
+                },
+                {
+                    "key": "sweet.framework.core.mvc.upload.maxRequestSize",
+                    "name": "上传请求的最大字节数",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "100MB",
+                    "description": "上传请求的最大字节数, 单位支持K,M"
+                },
+                {
+                    "key": "sweet.framework.core.mvc.upload.storageLocation",
+                    "name": "上传的临时文件存储位置",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "",
+                    "description": ""
+                },
+                {
+                    "key": "management.contextPath",
+                    "name": "内置管理服务EndPoints配置",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "/endpoints",
+                    "description": ""
+                },
+                {
+                    "key": "management.port",
+                    "name": "管理服务端口",
+                    "type": "number",
+                    "candidateValues": null,
+                    "defaultValue": "-1",
+                    "description": ""
+                },
+                {
+                    "key": "management.address",
+                    "name": "管理服务绑定IP",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "0.0.0.0",
+                    "description": "0.0.0.0表示绑定到所有网卡"
+                },
+                {
+                    "key": "sweet.cloud.apm.log.cron",
+                    "name": "写APM日志的频率",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "0/30 * * * * *",
+                    "description": "cron表达式, 默认30秒写一次"
+                },
+                {
+                    "key": "sweet.cloud.apm.update.cron",
+                    "name": "更新APM信息的频率",
+                    "type": "string",
+                    "candidateValues": null,
+                    "defaultValue": "0/5 * * * * *",
+                    "description": "cron表达式, 默认5秒更新一次"
+                }
+            ]
+        }
+    },
+    "message": "API调用成功"
+}

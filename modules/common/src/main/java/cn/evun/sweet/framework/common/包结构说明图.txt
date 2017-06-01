@@ -1,0 +1,17 @@
+data structure包：提供常用的数据结构。
+document parser包： 文件解析函数包。如xml、dom 等                //TODO
+email包：邮件相关                                                //TODO
+network包：提供网络相关函数包。
+    --  http包：httpClient等库的通用用法
+    --  socket：
+    --  其他
+serialize包：java object 序列化
+web包：j2ee web编程函数库。包括cookie html 等封装操作
+util包：通用基础函数库
+    --  collection 包：集合等数据结构相关函数库
+    --  encode 包：加密、编解码
+    --  io 包：java io 函数库
+    --  reflect 包： java 反射
+    --  resource 包：文件相关操作     [add propertiesUtil]
+    --  time 包： 时间相关操作   不用apache 包 使用 JODA(日期操作)  guava(google的时间包)
+    --  其他： [add 正则]

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <title>配置清单</title>
+    <link rel="stylesheet" href="../assets/css/index.css">
+</head>
+
+<body class="config-list-body">
+    <div class=" tabs-vertical-env" id="backupHtml">
+    </div>
+    <script type="text/html" id="backupHtmltmpl">
+        <!-- 选项卡 -->
+        <ul class="nav tabs-vertical" role="tablist">
+            {{each data as value y}}
+            <li class="{{if y == 0}}active{{/if}} tab">
+                <a href="#tab{{y}}" role="tab" data-toggle="tab" aria-expanded="false">
+                    <span class="visible-xs"><i class="fa fa-home"></i></span>
+                    <span class="hidden-xs">{{value.group}}</span>
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+        <div class="tab-content">
+            <!-- {{each data as value y}}
+            <div class="tab-pane {{if y == 0}}active{{/if}}" id="tab{{y}}">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th width=220>key</th>
+                            <th width=150>name</th>
+                            <th width=80>type</th>
+                            <th>candidateValues</th>
+                            <th>defaultValue</th>
+                            <th  width=200>description</th>
+                        </tr>
+                    </thead>
+                    <tbody style="word-break: break-all;word-wrap: break-all;">
+                        {{each value.items as item x}}
+                        <tr>
+                            <td>{{item.key}}</td>
+                            <td>{{item.name}}</td>
+                            <td>{{item.type}}</td>
+                            <td>{{item.candidateValues}}</td>
+                            <td>{{item.defaultValue}}</td>
+                            <td>{{item.description}}</td>
+                        </tr>
+                        {{/each}}
+                    </tbody>
+                </table>
+                <table id="table{{y}}">
+                </table>
+            </div>
+            {{/each}} -->
+            <div class="container-fluid"></div>
+             <table id="data-table">
+             </table>
+        </div>
+    </script>
+
+    <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,3 @@
+sweet.module.code.basePackages=cn.evun.sweet.test
+sweet.module.dao.basePackages=cn.evun.sweet.test.dao
+sweet.module.cloudClient.packages=cn.evun.sweet.framework.core

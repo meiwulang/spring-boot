@@ -1,0 +1,2 @@
+providerTraceFilter=cn.evun.sweet.framework.dubbo.filter.ProviderTraceFilter
+consumerTraceFilter=cn.evun.sweet.framework.dubbo.filter.ConsumerTraceFilter

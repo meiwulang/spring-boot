@@ -1,0 +1,12 @@
+{
+  "group" : "存储配置",
+  "items" : [
+    {
+      "key" : "sweet.framework.storage.type",
+      "name" : "存储类型",
+      "type" : "string",
+      "defaultValue" : "fastdfs",
+      "description" : "目前只支持FastDFS"
+    }
+  ]
+}

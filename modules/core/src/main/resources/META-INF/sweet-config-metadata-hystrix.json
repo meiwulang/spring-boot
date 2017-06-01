@@ -1,0 +1,33 @@
+{
+  "group" : "Hystrix全局配置",
+  "items" : [
+    {
+      "key" : "hystrix.threadpool.default.coreSize",
+      "name" : "Hystrix默认线程池",
+      "type" : "number",
+      "defaultValue" : "20",
+      "description" : "默认线程池大小,默认20,建议不要超过50"
+    },
+    {
+      "key" : "hystrix.command.default.fallback.enabled",
+      "name" : "是否启用Hystrix Fallback",
+      "type" : "boolean",
+      "defaultValue" : "false",
+      "description" : "是否启用Hystrix Fallback"
+    },
+    {
+      "key" : "hystrix.command.default.circuitBreaker.enabled",
+      "name" : "是否启用Hystrix熔断策略",
+      "type" : "boolean",
+      "defaultValue" : "true",
+      "description" : "熔断后,默认5分钟后尝试恢复"
+    },
+    {
+      "key" : "hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds",
+      "name" : "Hystrix命令执行超时时间",
+      "type" : "number",
+      "defaultValue" : "10000",
+      "description" : "单位:毫秒, 此值影响值全局接口,如接口有特殊设置需要,请设置command对应的key:hystrix.command.${xxx}.execution.isolation.thread.timeoutInMilliseconds, 这里xxx对应于命令的commandKey, 在HystrixFeign中commandKey与方法名一致"
+    }
+  ]
+}

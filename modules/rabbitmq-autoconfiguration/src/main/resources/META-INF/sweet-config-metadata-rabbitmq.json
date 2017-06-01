@@ -1,0 +1,55 @@
+{
+  "group" : "RabbitMQ配置",
+  "items" : [
+    {
+      "key" : "sweet.framework.rabbitmq.host",
+      "name" : "mq服务IP",
+      "type" : "string",
+      "defaultValue" : "10.86.86.13",
+      "description" : ""
+    },
+    {
+      "key" : "sweet.framework.rabbitmq.port",
+      "name" : "mq服务端口",
+      "type" : "string",
+      "defaultValue" : "5672",
+      "description" : ""
+    },
+    {
+      "key" : "sweet.framework.rabbitmq.username",
+      "name" : "mq用户名",
+      "type" : "string",
+      "defaultValue" : "guest",
+      "description" : ""
+    },
+    {
+      "key" : "sweet.framework.rabbitmq.password",
+      "name" : "mq密码",
+      "type" : "string",
+      "defaultValue" : "guest",
+      "description" : ""
+    },
+    {
+      "key" : "sweet.framework.rabbitmq.autoListen",
+      "name" : "自动监听",
+      "type" : "boolean",
+      "defaultValue" : "true",
+      "description" : "自动将RabbitMessageListener类型的Bean监听到对应的队列"
+    },
+    {
+      "key" : "sweet.framework.rabbitmq.serialize.type",
+      "name" : "消息序列化方式",
+      "type" : "enum",
+      "candidateValues" : ["1", "2"],
+      "defaultValue" : "1",
+      "description" : "1：jdk, 2：json"
+    },
+    {
+      "key" : "sweet.framework.rabbitmq.addresses",
+      "name" : "集群配置",
+      "type" : "string",
+      "defaultValue" : "",
+      "description" : "节点的用户名密码要求一直，覆盖单独host port配置。e.g. \"host[:port],...\" 10.200.111.92:5672,10.200.111.244:5672"
+    }
+  ]
+}

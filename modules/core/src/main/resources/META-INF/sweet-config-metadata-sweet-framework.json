@@ -1,0 +1,285 @@
+{
+  "group": "Sweet框架参数设置",
+  "items": [
+    {
+      "key": "spring.mvc.throw-exception-if-no-handler-found",
+      "name": "MVC Handler行为",
+      "type": "boolean",
+      "defaultValue": "true",
+      "description": "是否在没有对应Handler时抛出异常"
+    },
+    {
+      "key": "sweet.framework.core.mvc.error.handle",
+      "name": "启用默认错误控制器",
+      "type": "boolean",
+      "defaultValue": "true",
+      "description": ""
+    },
+    {
+      "key": "sweet.framework.core.mvc.error.handler.outputStackTrace",
+      "name": "输出完整错误栈",
+      "type": "boolean",
+      "defaultValue": "false",
+      "description": "输出错误栈(建议生产环境下关闭)"
+    },
+    {
+      "key": "sweet.framework.core.mvc.error.handle.json",
+      "name": "使用json输出错误",
+      "type": "boolean",
+      "defaultValue": "true",
+      "description": "设置为\"false\"后将看到\"原始\"的异常输出"
+    },
+    {
+      "key": "sweet.framework.core.http.request.trace",
+      "name": "HTTP请求跟踪",
+      "type": "boolean",
+      "defaultValue": "true",
+      "description": "是否开启HTTP请求链路跟踪"
+    },
+    {
+      "key": "sweet.framework.core.mvc.api.i18n.basename",
+      "name": "国际化文件路径",
+      "type": "string",
+      "defaultValue": "classpath*:i18n/api",
+      "description": "APIResponse的国际化文件路径, 多个路径以\",\"分隔, 资源文件请使用\"UTF-8\"字符集, 框架会以此配置值作为PathMatchingResource的前缀加载相应Locale的资源"
+    },
+    {
+      "key": "sweet.framework.core.mvc.api.i18n.locale",
+      "name": "国际化名",
+      "type": "string",
+      "defaultValue": "zh_CN",
+      "description": "APIResponse的国际化名"
+    },
+    {
+      "key": "sweet.framework.core.i18n.enabled",
+      "name": "i18n配置",
+      "type": "string",
+      "defaultValue": "true",
+      "description": ""
+    },
+    {
+      "key": "sweet.framework.core.i18n.resources.baseName",
+      "name": "国际化配置文件存放目录",
+      "type": "string",
+      "defaultValue": "i18n/messages",
+      "description": "国际化Message配置文件存放目录"
+    },
+    {
+      "key": "sweet.framework.core.i18n.resources.encoding",
+      "name": "国际化Message配置文件编码",
+      "type": "string",
+      "defaultValue": "utf-8",
+      "description": ""
+    },
+    {
+      "key": "sweet.framework.core.i18n.defaultLocale",
+      "name": "默认Locale",
+      "type": "string",
+      "defaultValue": "zh_CN",
+      "description": ""
+    },
+    {
+      "key": "sweet.framework.core.i18n.locale.param",
+      "name": "转换语言时传参名称",
+      "type": "string",
+      "defaultValue": "lang",
+      "description": "转换语言时传参名称, http://xxx.xxx.com/page?lang=zh_CN"
+    },
+    {
+      "key": "sweet.framework.core.http.defence.xss",
+      "name": "XSS + SQL注入防御",
+      "type": "boolean",
+      "defaultValue": "true",
+      "description": "XSS和SQL注入防御"
+    },
+    {
+      "key": "sweet.framework.core.http.defence.csrf",
+      "name": "CSRF防御",
+      "type": "boolean",
+      "defaultValue": "false",
+      "description": "CSRF防御"
+    },
+    {
+      "key": "sweet.framework.core.http.restful.doc",
+      "name": "使用Swagger2在线Restful文档",
+      "type": "boolean",
+      "defaultValue": "true",
+      "description": "使用Swagger2 在线Restful文档, 访问: /swagger-ui.html"
+    },
+    {
+      "key": "sweet.framework.core.http.restful.doc.modelPackages",
+      "name": "Model包名",
+      "type": "string",
+      "defaultValue": "",
+      "description": "Model包名, 多个包使用\",\"分隔"
+    },
+    {
+      "key": "sweet.framework.core.http.restful.doc.swagger.title",
+      "name": "swagger文档属性",
+      "type": "string",
+      "defaultValue": "${spring.application.name:sweet-application}Restful API Documentation",
+      "description": ""
+    },
+    {
+      "key": "sweet.framework.core.http.restful.doc.swagger.description",
+      "name": "swagger文档属性",
+      "type": "string",
+      "defaultValue": "",
+      "description": ""
+    },
+    {
+      "key": "sweet.framework.core.http.restful.doc.swagger.termsOfServiceUrl",
+      "name": "swagger文档属性",
+      "type": "string",
+      "defaultValue": "http://swagger.io/terms/",
+      "description": ""
+    },
+    {
+      "key": "sweet.framework.core.http.restful.doc.swagger.contract",
+      "name": "swagger文档属性",
+      "type": "",
+      "defaultValue": "sweet-group@geely.com",
+      "description": ""
+    },
+    {
+      "key": "sweet.framework.core.http.restful.doc.swagger.license",
+      "name": "swagger文档属性",
+      "type": "string",
+      "defaultValue": "Apache 2.0",
+      "description": ""
+    },
+    {
+      "key": "sweet.framework.core.http.restful.doc.swagger.licenseUrl",
+      "name": "swagger文档属性",
+      "type": "string",
+      "defaultValue": "http://www.apache.org/licenses/LICENSE-2.0",
+      "description": ""
+    },
+    {
+      "key": "springfox.documentation.swagger.v2.path",
+      "name": "spring-fox 文档json数据地址",
+      "type": "string",
+      "defaultValue": "/v2/api-docs",
+      "description": ""
+    },
+    {
+      "key": "sweet.framework.core.http.restful.doc.api.groups",
+      "name": "ocket group配置",
+      "type": "string",
+      "defaultValue": "",
+      "description": "docket group配置, 格式: [接口组名1:]接口URI正则表达式1;[接口组名2:]接口URI正则表达式2; \"[]\"中的表示可选项, 接口组名不可重复"
+    },
+    {
+      "key": "sweet.framework.core.mvc.api.pattern",
+      "name": "api uri pattern",
+      "type": "string",
+      "defaultValue": "/*",
+      "description": ""
+    },
+    {
+      "key": "sweet.framework.core.mvc.dynamic-resource.pattern",
+      "name": "dynamic resource pattern",
+      "type": "string",
+      "defaultValue": "/*",
+      "description": ""
+    },
+    {
+      "key": "sweet.framework.core.mvc.data-binder.date.useGMTTimeZone",
+      "name": "SpringMVC日期型参数解析",
+      "type": "string",
+      "defaultValue": "false",
+      "description": "是否使用GMT时区, 注意: 开启此选项会将传入时间字符串全部当作GMT时间处理, 默认使用当前时区,请注意配置的时间格式需要使用\":\"区分\"时,分,秒,毫秒\"字段"
+    },
+    {
+      "key": "sweet.framework.core.rest.invocation.connectTimeout",
+      "name": "连接超时时间",
+      "type": "number",
+      "defaultValue": "3000",
+      "description": "连接超时时间, -1表示不超时"
+    },
+    {
+      "key": "sweet.framework.core.rest.invocation.readTimeout",
+      "name": "请求发出后,响应超时时间",
+      "type": "number",
+      "defaultValue": "-1",
+      "description": "请求发出后,响应超时时间,-1表示不超时"
+    },
+    {
+      "key": "sweet.framework.core.rest.invocation.warning.limit",
+      "name": "慢请求",
+      "type": "number",
+      "defaultValue": "2000",
+      "description": ""
+    },
+    {
+      "key": "sweet.framework.core.mvc.upload.maxFileSize",
+      "name": "上传文件的最大字节数, 单位支持K,M",
+      "type": "string",
+      "defaultValue": "10MB",
+      "description": "上传请求的最大字节数, 单位支持K,M"
+    },
+    {
+      "key": "sweet.framework.core.mvc.upload.maxRequestSize",
+      "name": "上传请求的最大字节数",
+      "type": "string",
+      "defaultValue": "100MB",
+      "description": "上传请求的最大字节数, 单位支持K,M"
+    },
+    {
+      "key": "sweet.framework.core.mvc.upload.storageLocation",
+      "name": "上传的临时文件存储位置",
+      "type": "string",
+      "defaultValue": "",
+      "description": ""
+    },
+    {
+      "key": "management.contextPath",
+      "name": "内置管理服务EndPoints配置",
+      "type": "string",
+      "defaultValue": "/endpoints",
+      "description": ""
+    },
+    {
+      "key": "management.port",
+      "name": "管理服务端口",
+      "type": "number",
+      "defaultValue": "-1",
+      "description": ""
+    },
+    {
+      "key": "management.address",
+      "name": "管理服务绑定IP",
+      "type": "string",
+      "defaultValue": "0.0.0.0",
+      "description": "0.0.0.0表示绑定到所有网卡"
+    },
+    {
+      "key": "sweet.cloud.apm.log.cron",
+      "name": "写APM日志的频率",
+      "type": "string",
+      "defaultValue": "0/30 * * * * *",
+      "description": "cron表达式, 默认30秒写一次"
+    },
+    {
+      "key": "sweet.cloud.apm.update.cron",
+      "name": "更新APM信息的频率",
+      "type": "string",
+      "defaultValue": "0/5 * * * * *",
+      "description": "cron表达式, 默认5秒更新一次"
+    },
+    {
+      "key":"sweet.cloud.service.client.packages",
+      "name":"云服务客户端扫包路径",
+      "type":"string",
+      "defaultValue":"",
+      "description":"引用服务接口的扫包路径,多个包使用','分隔"
+    },
+    {
+      "key":"sweet.cloud.service.client.native-service-first.policy",
+      "name":"是否开启本地云服务优先模式",
+      "type":"string",
+      "defaultValue":"disabled",
+      "description":"enabled/disabled, 设置为enabled将开启本地云服务优先模式, 本地云服务优先模式将优先使用本机开启的云服务, 可以考虑在开发环境中使用"
+    }
+  ]
+}

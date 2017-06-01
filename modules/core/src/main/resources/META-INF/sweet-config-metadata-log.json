@@ -1,0 +1,47 @@
+{
+  "group" : "日志配置",
+  "items" : [
+    {
+      "key" : "spring.output.ansi.enabled",
+      "name" : "控制台颜色",
+      "type" : "string",
+      "defaultValue" : "ALWAYS",
+      "description" : ""
+    },
+    {
+      "key" : "logging.level.root",
+      "name" : "日志级别",
+      "type" : "string",
+      "defaultValue" : "INFO",
+      "description" : "日志级别(TRACE, DEBUG, INFO, WARN, ERROR, FATAL, OFF)"
+    },
+    {
+      "key" : "logging.level.cn.evun.sweet.common.tracer.ThreadLocalProcessTracer",
+      "name" : "日志级别",
+      "type" : "string",
+      "defaultValue" : "INFO",
+      "description" : "ThreadLocalProcessTracer日志级别"
+    },
+    {
+      "key" : "logging.file",
+      "name" : "日志文件路径",
+      "type" : "string",
+      "defaultValue" : "${user.home:./}/sweet-logs/${spring.application.name:sweet-application}-${spring.application.index:${server.port:8080}}.log",
+      "description" : ""
+    },
+    {
+      "key" : "logging.pattern.console",
+      "name" : "控制台日志输出格式",
+      "type" : "string",
+      "defaultValue" : "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p}) %clr(${PID:- }){magenta} %appId %rid %clr(---){faint} %clr([%15.15t]){faint} %clr(%-40.40logger{39}){cyan} %clr(:){faint} %m%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}",
+      "description" : "定义输出到文件格式"
+    },
+    {
+      "key" : "logging.pattern.file",
+      "name" : "文件日志输出格式",
+      "type" : "string",
+      "defaultValue" : "%d{yyyy-MM-dd HH:mm:ss.SSS} ${LOG_LEVEL_PATTERN:-%5p} ${PID:- } %appId %rid --- [%t] %-40.40logger{39} : %m%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}",
+      "description" : "定义输出到文件格式"
+    }
+  ]
+}

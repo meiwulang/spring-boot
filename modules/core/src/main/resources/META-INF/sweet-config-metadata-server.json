@@ -1,0 +1,40 @@
+{
+  "group" : "Tomcat配置",
+  "items" : [
+    {
+      "key" : "server.port",
+      "name" : "Tomcat监听端口",
+      "type" : "string",
+      "defaultValue" : "${spring.application.index}",
+      "description" : ""
+    },
+    {
+      "key" : "server.context-path",
+      "name" : "Servlet Context Path",
+      "type" : "string",
+      "defaultValue" : "/",
+      "description" : ""
+    },
+    {
+      "key" : "server.session.timeout",
+      "name" : "会话过期时间(单位: 秒)",
+      "type" : "number",
+      "defaultValue" : "1800",
+      "description" : ""
+    },
+    {
+      "key" : "server.address",
+      "name" : "监听IP地址",
+      "type" : "string",
+      "defaultValue" : "0.0.0.0",
+      "description" : "默认在所有网卡上服务"
+    },
+    {
+      "key" : "server.tomcat.max-threads",
+      "name" : "服务线程数",
+      "type" : "number",
+      "defaultValue" : "300",
+      "description" : "最大请求处理线程数"
+    }
+  ]
+}

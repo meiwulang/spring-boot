@@ -1,0 +1,194 @@
+{
+  "group" : "数据库配置",
+  "items" : [
+    {
+      "key" : "spring.datasource.name",
+      "name" : "数据源名称",
+      "type" : "string",
+      "defaultValue" : "${spring.application.name:sweet-framework}.DataSource.${spring.application.index:${server.port:8080}}",
+      "description" : "数据源名称"
+    },
+    {
+      "key" : "spring.datasource.type",
+      "name" : "JDBC数据源",
+      "type" : "string",
+      "defaultValue" : "com.alibaba.druid.pool.DruidDataSource",
+      "description" : "JDBC数据源, 默认使用阿里Druid数据源"
+    },
+    {
+      "key" : "spring.datasource.db-type",
+      "name" : "数据库类型",
+      "type" : "string",
+      "defaultValue" : "mysql",
+      "description" : "数据库类型"
+    },
+    {
+      "key" : "spring.datasource.driver-class-name",
+      "name" : "JDBC驱动程序",
+      "type" : "string",
+      "defaultValue" : "com.mysql.jdbc.Driver",
+      "description" : "JDBC驱动程序"
+    },
+    {
+      "key" : "spring.datasource.url",
+      "name" : "JDBC Connection URL",
+      "type" : "string",
+      "defaultValue" : "jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=UTF-8",
+      "description" : "JDBC Connection URL"
+    },
+    {
+      "key" : "spring.datasource.username",
+      "name" : "JDBC 用户名",
+      "type" : "string",
+      "defaultValue" : "root",
+      "description" : "JDBC用户名"
+    },
+    {
+      "key" : "spring.datasource.password",
+      "name" : "JDBC 密码",
+      "type" : "string",
+      "defaultValue" : "",
+      "description" : "JDBC密码"
+    },
+    {
+      "key" : "spring.datasource.initialSize",
+      "name" : "初始化连接数",
+      "type" : "number",
+      "defaultValue" : "2",
+      "description" : "初始化连接数"
+    },
+    {
+      "key" : "spring.datasource.maxActive",
+      "name" : "最大连接数",
+      "type" : "number",
+      "defaultValue" : "5",
+      "description" : "最大连接数"
+    },
+    {
+      "key" : "spring.datasource.minIdle",
+      "name" : "最小不活动连接数",
+      "type" : "number",
+      "defaultValue" : "1",
+      "description" : "最小不活动连接数"
+    },
+    {
+      "key" : "spring.datasource.maxWait",
+      "name" : "最大等待时间",
+      "type" : "number",
+      "defaultValue" : "-1",
+      "description" : "连接池占满时,最大等待时间(毫秒), \"-1\"表示一直等待直到有可用连接"
+    },
+    {
+      "key" : "spring.datasource.timeBetweenEvictionRunsMillis",
+      "name" : "Idle检测",
+      "type" : "number",
+      "defaultValue" : "10000",
+      "description" : "不活动连接检测时间"
+    },
+    {
+      "key" : "spring.datasource.minEvictableIdleTimeMillis",
+      "name" : "minEvictableIdleTime",
+      "type" : "number",
+      "defaultValue" : "30000",
+      "description" : "不活动连接释放时间"
+    },
+    {
+      "key" : "spring.datasource.validationQuery",
+      "name" : "有效连接验证SQL",
+      "type" : "string",
+      "defaultValue" : "select '1' from dual",
+      "description" : ""
+    },
+    {
+      "key" : "spring.datasource.testOnBorrow",
+      "name" : "连接有效性验证",
+      "type" : "boolean",
+      "defaultValue" : "false",
+      "description" : "Borrow阶段"
+    },
+    {
+      "key" : "spring.datasource.testOnReturn",
+      "name" : "连接有效性验证",
+      "type" : "boolean",
+      "defaultValue" : "false",
+      "description" : "Return阶段"
+    },
+    {
+      "key" : "spring.datasource.testWhileIdle",
+      "name" : "连接有效性验证",
+      "type" : "boolean",
+      "defaultValue" : "true",
+      "description" : "Idle阶段"
+    },
+    {
+      "key" : "spring.datasource.poolPreparedStatements",
+      "name" : "池化PreparedStatement",
+      "type" : "boolean",
+      "defaultValue" : "false",
+      "description" : "是否启用PSCache, 使用Oracle库建议开启"
+    },
+    {
+      "key" : "spring.datasource.maxOpenPreparedStatements",
+      "name" : "最大PreparedStatement数",
+      "type" : "number",
+      "defaultValue" : "-1",
+      "description" : "PSCache大小"
+    },
+    {
+      "key" : "mybatis.mapperLocations",
+      "name" : "Mybatis sql-map文件路径",
+      "type" : "string",
+      "defaultValue" : "classpath*:sql-mappers/**/*.xml,classpath*:sql-mappers-${spring.datasource.db-type:mysql}/**/*.xml",
+      "description" : "Mybatis sql mapper文件路径, 多个路径请使用\",\"分隔"
+    },
+    {
+      "key" : "spring.datasource.filters",
+      "name" : "druid配置监控统计拦截的filters",
+      "type" : "string",
+      "defaultValue" : "stat",
+      "description" : "druid配置监控统计拦截的filters，去掉后监控界面sql无法统计，'wall'用于防火墙"
+    },
+    {
+      "key" : "druid.stat.slowSqlMillis",
+      "name" : "Druid定义慢SQL(ms)",
+      "type" : "number",
+      "defaultValue" : "5000",
+      "description" : "druid统计慢sql"
+    },
+    {
+      "key" : "mybatis.typeAliasesPackage",
+      "name" : "Mybatis类型映射别名包",
+      "type" : "string",
+      "defaultValue" : "",
+      "description" : "Mybatis 类型映射别名包，多个包请使用\",\"分隔"
+    },
+    {
+      "key" : "sweet.framework.core.mybatis.mapper.scan.basePackages",
+      "name" : "Mapper扫描基准包路径",
+      "type" : "string",
+      "defaultValue" : "",
+      "description" : "请设置到DAO接口目录, 支持通配符及以\",\"或\";\"分隔的多个包"
+    },
+    {
+      "key" : "sweet.framework.core.mybatis.mapper.scan.annotation",
+      "name" : "Mapper上的注解",
+      "type" : "string",
+      "defaultValue" : "org.apache.ibatis.annotations.Mapper",
+      "description" : "mapper扫描时,只有使用此注解的类才被识别"
+    },
+    {
+      "key" : "mybatis.typeHandlersPackage",
+      "name" : "Mybatis类型转换包",
+      "type" : "string",
+      "defaultValue" : "",
+      "description" : "Mybatis 类型转换包"
+    },
+    {
+      "key" : "mybatis.configuration.auto-mapping-behavior",
+      "name" : "ResultMap自动Mapping行为",
+      "type" : "string",
+      "defaultValue" : "FULL",
+      "description" : "默认全部匹配, 可选值: NONE/PARTIAL/FULL"
+    }
+  ]
+}

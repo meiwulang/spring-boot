@@ -1,0 +1,119 @@
+{
+  "group" : "会话共享redis配置",
+  "items" : [
+    {
+      "key" : "sweet.framework.session.redis.host",
+      "name" : "redis服务器IP",
+      "name" : "redis服务器IP",
+      "type" : "string",
+      "defaultValue" : "127.0.0.1",
+      "description" : "Standalone模式配置"
+    },
+    {
+      "key" : "sweet.framework.session.redis.port",
+      "name" : "redis服务端口",
+      "type" : "number",
+      "defaultValue" : "6379",
+      "description" : "Standalone模式配置"
+    },
+    {
+      "key" : "sweet.framework.session.redis.password",
+      "name" : "redis密码",
+      "type" : "number",
+      "defaultValue" : "",
+      "description" : ""
+    },
+    {
+      "key" : "sweet.framework.session.redis.database",
+      "name" : "redis数据库ID",
+      "type" : "number",
+      "defaultValue" : "0",
+      "description" : ""
+    },
+    {
+      "key" : "sweet.framework.session.redis.pool.maxActive",
+      "name" : "redis连接池最大活动连接数",
+      "type" : "number",
+      "defaultValue" : "50",
+      "description" : ""
+    },
+    {
+      "key" : "sweet.framework.session.redis.pool.maxIdle",
+      "name" : "redis连接池最大不活动连接数",
+      "type" : "number",
+      "defaultValue" : "8",
+      "description" : ""
+    },
+    {
+      "key" : "sweet.framework.session.redis.pool.maxWait",
+      "name" : "新的redis连接获取请求等待时间",
+      "type" : "number",
+      "defaultValue" : "-1",
+      "description" : "redis连接池达到最大连接数后, 新的redis连接获取请求等待时间, 单位: 毫秒, \"-1\"表示无限等待"
+    },
+    {
+      "key" : "sweet.framework.session.redis.pool.minIdle",
+      "name" : "redis连接池最小不活动连接数",
+      "type" : "number",
+      "defaultValue" : "0",
+      "description" : ""
+    },
+    {
+      "key" : "sweet.framework.session.redis.hosts",
+      "name" : "redis sentinel/cluster hosts",
+      "type" : "string",
+      "defaultValue" : "",
+      "description" : "格式: \"127.0.0.1:26379;127.0.0.1:26380;127.0.0.1:26381;\" 使用此参数时, sweet.redis.host和sweet.redis.port无效."
+    },
+    {
+      "key" : "sweet.framework.session.redis.hosts.type",
+      "name" : "redis hosts types",
+      "type" : "enum",
+      "candidateValues" : ["sentinel", "cluster"],
+      "defaultValue" : "sentinel",
+      "description" : "可以为sentinel/cluster, 默认是: sentinel"
+    },
+    {
+      "key" : "sweet.framework.session.redis.sentinel.master",
+      "name" : "redis sentinel master",
+      "type" : "number",
+      "defaultValue" : "masterName",
+      "description" : "Sentinel环境有效"
+    },
+    {
+      "key" : "sweet.framework.session.redis.namespace",
+      "name" : "KEY命名空间",
+      "type" : "string",
+      "defaultValue" : "",
+      "description" : "Deprecated"
+    },
+    {
+      "key" : "sweet.framework.session.sso.enabled",
+      "name" : "是否启用单点登录",
+      "type" : "boolean",
+      "defaultValue" : "true",
+      "description" : "启用单点登录时,cookie中的SessionId将写入到顶级域名"
+    },
+    {
+      "key" : "sweet.framework.session.cross-context.enabled",
+      "name" : "是否启动跨context",
+      "type" : "boolean",
+      "defaultValue" : "true",
+      "description" : "是否启动跨context, 启用时, cookie中的SessionId将写入到\"/\""
+    },
+    {
+      "key" : "sweet.framework.session.parse-request.enabled",
+      "name" : "是否解析请求中的SessionId参数",
+      "type" : "boolean",
+      "defaultValue" : "true",
+      "description" : "启用时,将从HttpServletRequest的parameter中尝试读取SessionId, 一旦读取到相应值, 则Cookie中的SessionId变为无效"
+    },
+    {
+      "key" : "sweet.framework.session.request-param.name",
+      "name" : "请求中的指明SessionId的参数名",
+      "type" : "string",
+      "defaultValue" : "__ticket__",
+      "description" : "请求中的指明SessionId的参数名, 可从URL或Request Body中传递"
+    }
+  ]
+}

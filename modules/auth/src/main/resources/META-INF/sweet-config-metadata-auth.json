@@ -1,0 +1,19 @@
+{
+  "group" : "权限模块配置",
+  "items" : [
+    {
+      "key" : "sweet.framework.auth.mode",
+      "name" : "权限模块应用模式",
+      "type" : "string",
+      "defaultValue" : "MIXED",
+      "description" : "权限模块有三种模式: MIXED/URL/ANNOTATION, 当应用URL模式时, 原Shiro注解(RequiresRole, RequiresPermission等)无效, 使用URL匹配的方式授权(Ant规则), 请参考, ShiroAuthService#getPermissions()方法说明"
+    },
+    {
+      "key" : "sweet.framework.auth.path-matching.performance.log",
+      "name" : "URL匹配性能日志",
+      "type" : "boolean",
+      "defaultValue" : "true",
+      "description" : ""
+    }
+  ]
+}

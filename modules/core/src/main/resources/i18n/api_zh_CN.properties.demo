@@ -1,0 +1,8 @@
+not-initialized=未初始化
+success=API调用成功
+fail=API调用失败
+validation-fail=请求参数验证失败
+bad-parameter=拒绝访问, 请求参数错误
+unauthorized=拒绝访问, 您没有权限请求该资源
+user-not-login=用户未登录
+rpc-fail=远程调用失败【{0}】

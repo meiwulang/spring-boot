@@ -1,0 +1,61 @@
+{
+  "group" : "FastDFS配置",
+  "items" : [
+    {
+      "key" : "sweet.framework.storage.fastdfs.connection-timeout",
+      "name" : "连接超时时间",
+      "type" : "number",
+      "defaultValue" : "5",
+      "description" : "FastDFS连接超时时间, 单位: 秒, 默认值2秒"
+    },
+    {
+      "key" : "sweet.framework.storage.fastdfs.network-timeout",
+      "name" : "网络超时时间",
+      "type" : "number",
+      "defaultValue" : "30",
+      "description" : "FastDFS网络超时时间, 单位: 秒, 默认值2秒"
+    },
+    {
+      "key" : "sweet.framework.storage.fastdfs.charset",
+      "name" : "默认字符集",
+      "type" : "string",
+      "defaultValue" : "UTF-8",
+      "description" : "FastDFS字符集, 只能配置成\"UTF-8\""
+    },
+    {
+      "key" : "sweet.framework.storage.fastdfs.http.port",
+      "name" : "FastDFS的HTTP监听端口",
+      "type" : "number",
+      "defaultValue" : "80",
+      "description" : "FastDFS的HTTP监听端口"
+    },
+    {
+      "key" : "sweet.framework.storage.fastdfs.http.anti-steal-token",
+      "name" : "FastDFS的HTTP的AntiSteamToken",
+      "type" : "boolean",
+      "defaultValue" : "false",
+      "description" : "这个不懂, 配置成false就好了"
+    },
+    {
+      "key" : "sweet.framework.storage.fastdfs.http.secret-key",
+      "name" : "FastDFS的HTTP密钥",
+      "type" : "string",
+      "defaultValue" : "FastDFS1234567890",
+      "description" : "FastDFS的HTTP密钥, 默认\"FastDFS1234567890\""
+    },
+    {
+      "key" : "sweet.framework.storage.fastdfs.tracker-servers",
+      "name" : "FastDFS的TackerServers集群",
+      "type" : "string",
+      "defaultValue" : "10.86.87.208:22122,10.86.87.208:22122,10.86.87.208:22122",
+      "description" : "FastDFS的TackerServers集群, 参考: \"10.86.87.208:22122,10.86.87.208:22122,10.86.87.208:22122\""
+    },
+    {
+      "key" : "sweet.framework.storage.fastdfs.tracker-domain",
+      "name" : "FastDFS的TackerServers域名",
+      "type" : "string",
+      "defaultValue" : "http://www.igap.cc/",
+      "description" : "FastDFS的TackerServers域名, 请注意后面的\"/\"框架不会自动补上, 以防止该地址是个转发地址"
+    }
+  ]
+}

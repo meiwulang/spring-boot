@@ -1,0 +1,111 @@
+{
+  "group" : "Redis配置",
+  "items" : [
+    {
+      "key" : "sweet.framework.redis.host",
+      "name" : "Redis服务器IP",
+      "type" : "string",
+      "defaultValue" : "127.0.0.1",
+      "description" : "支持Redis Standalone"
+    },
+    {
+      "key" : "sweet.framework.redis.port",
+      "name" : "redis服务端口",
+      "type" : "string",
+      "defaultValue" : "6379",
+      "description" : ""
+    },
+    {
+      "key" : "sweet.framework.redis.password",
+      "name" : "redis密码",
+      "type" : "string",
+      "defaultValue" : "",
+      "description" : ""
+    },
+    {
+      "key" : "sweet.framework.redis.database",
+      "name" : "redis数据库索引",
+      "type" : "number",
+      "defaultValue" : "0",
+      "description" : ""
+    },
+    {
+      "key" : "sweet.framework.redis.pool.maxActive",
+      "name" : "redis连接池最大活动连接数",
+      "type" : "number",
+      "defaultValue" : "8",
+      "description" : ""
+    },
+    {
+      "key" : "sweet.framework.redis.pool.maxIdle",
+      "name" : "redis连接池最大不活动连接数",
+      "type" : "number",
+      "defaultValue" : "8",
+      "description" : ""
+    },
+    {
+      "key" : "sweet.framework.redis.pool.maxWait",
+      "name" : "新的redis连接获取请求等待时间",
+      "type" : "number",
+      "defaultValue" : "-1",
+      "description" : "redis连接池达到最大连接数后, 新的redis连接获取请求等待时间, 单位: 毫秒, \"-1\"表示无限等待"
+    },
+    {
+      "key" : "sweet.framework.redis.pool.minIdle",
+      "name" : "redis连接池最小不活动连接数",
+      "type" : "number",
+      "defaultValue" : "0",
+      "description" : ""
+    },
+    {
+      "key" : "sweet.framework.redis.hosts",
+      "name" : "redis sentinel/cluster hosts",
+      "type" : "string",
+      "defaultValue" : "",
+      "description" : "格式: \"127.0.0.1:26379;127.0.0.1:26380;127.0.0.1:26381;\",使用此参数时, sweet.framework.redis.host和sweet.framework.redis.port无效."
+    },
+    {
+      "key" : "sweet.framework.redis.hosts.type",
+      "name" : "edis hosts types",
+      "type" : "enum",
+      "candidateValues" : ["sentinel", "cluster"],
+      "defaultValue" : "sentinel",
+      "description" : " 可以为sentinel/cluster, 默认是: sentinel"
+    },
+    {
+      "key" : "sweet.framework.redis.sentinel.master",
+      "name" : "redis哨兵主服务名称",
+      "type" : "string",
+      "defaultValue" : "masterName",
+      "description" : ""
+    },
+    {
+      "key" : "sweet.framework.redis.monitor.output.interval",
+      "name" : "redis监控输出间隔时间",
+      "type" : "number",
+      "defaultValue" : "300",
+      "description" : "默认300秒"
+    },
+    {
+      "key" : "sweet.framework.redis.keys.normalize",
+      "name" : "标准化cache, queue, topic的key",
+      "type" : "string",
+      "defaultValue" : "true",
+      "description" : "自动添加的前缀: cache-prefix: sweet:cache:, queue-prefix: sweet:queue:, topic-prefix: sweet:topic: ,注意: 当与其他非使用sweet-redis模块访问redis的应用通过redis交互数据时, 请注意当此选项打开时产生的标准化KEY前缀. 关闭它或请其他应用也遵循此规范"
+    },
+    {
+      "key" : "sweet.framework.redis.keys.namespace",
+      "name" : "RedisKey命名空间",
+      "type" : "string",
+      "defaultValue" : "",
+      "description" : "参考cn.evun.sweet.framework.redis.RedisKeyNamespace, 建议应用设置成cn.evun.****(项目名)"
+    },
+    {
+      "key" : "sweet.framework.redis.timeout",
+      "name" : "Redis 连接超时时间",
+      "type" : "number",
+      "defaultValue" : "2000",
+      "description" : "-1表示永不超时"
+    }
+  ]
+}
